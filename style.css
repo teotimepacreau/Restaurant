@@ -1,0 +1,285 @@
+.container {
+  height: 100dvh;
+}
+
+#background {
+  position: relative;
+  width: 100dvw;
+  height: 70%;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  background-color: var(--accentwith7opacity);
+  box-shadow: 2px 2px 10px 0px var(--shadow);
+  filter: blur(0.1px);
+  backdrop-filter: blur(10px);
+  z-index: 3;
+}
+
+#circle-sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(
+    167deg,
+    oklch(68.14% 0.2 54.95) 40%, oklch(66.14% 0.2 54.95) 20%,
+    oklch(54.62% 0.25 34.46) 70%
+  );
+  filter: blur(30px);
+  box-shadow: 5px 5px 10px 20px var(--orange);
+}
+
+#circle-pink {
+    position: absolute;
+    top: 51%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(
+      160deg,
+      oklch(44.62% 0.2 13.98) 40%,
+      oklch(34.62% 0.3 13.98) 60%
+    );
+    filter: blur(150px);
+    z-index: 1;
+    mix-blend-mode: lighten;
+  }
+
+  #circle-yellow {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(
+      160deg,
+      oklch(90.62% 0.3 70) 40%,
+      oklch(70% 0.3 70) 60%
+    );
+    filter: blur(40px);
+  }
+
+  #index-bottom {
+    padding: var(--rythme);
+    height: 30%;
+    display: grid;
+    align-items: center;
+}
+
+#index-bottom h1 {
+    font-size: calc(5*var(--rythme));
+    letter-spacing: -0.03rem;
+    font-family: "Mango Grotesque";
+    font-variation-settings: "wght" 700;
+}
+
+:root {
+  --rythme: 1rlh;
+  --bg: oklch(99% 0.006 200);
+  --white: oklch(99% 0.002 200);
+  --accent: oklch(30% 0.2 200);
+  --accentwith80opacity: oklch(from var(--accent) l c h / 80%);
+  --accentwith10opacity: oklch(from var(--accent) l c h / 10%);
+  --accentwith7opacity: oklch(from var(--accent) l c h / 7%);
+  --surface1: oklch(50% 0.02 200);
+  --surface1with2opacity: oklch(from var(--surface1) l c h / 2%);
+  --surface1with5opacity: oklch(from var(--surface1) l c h / 5%);
+  --surface1with7opacity: oklch(from var(--surface1) l c h / 7%);
+  --surface1with50opacity: oklch(from var(--surface1) l c h / 50%);
+  --surface1with90opacity: oklch(from var(--surface1) l c h / 90%);
+  --surface1with98opacity: oklch(from var(--surface1) l c h / 98%);
+  --red: oklch(40% 0.3 20);
+  --orange: oklch(90% 0.37 85 / 85%);
+  --yellow: oklch(87.82% 0.1933 115.55);
+  --green: oklch(40% 0.3 140);
+  --shadow: oklch(5% 0.02 200 / 15%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100dvh;
+}
+
+/* Set shorter line heights on headings and text-wrap */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  color: currentColor;
+  text-underline-offset: 0.3ex;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10rem;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* More consistent, styleable hr*/
+hr {
+  border-width: 1px 0 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+input[type="checkbox"] {
+  width: calc(0.6 * var(--rythme)); /* Adjust the width */
+  height: calc(0.6 * var(--rythme)); /* Adjust the height */
+}
+
+input[type="search"] {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+input[type="file"] {
+  appearance: none;
+  border: none;
+  background-color: var(--bg);
+  border-radius: 0.2rem 0.2rem 0 0;
+  transition: all 0.2s ease-out;
+}
+
+input[type="date"] {
+  border: 3px ridge transparent;
+  border-radius: 0.2rem;
+  background-color: var(--accentwith10opacity);
+  box-shadow: none;
+  outline: none;
+  padding: calc(0.25 * var(--rythme));
+  color: var(--surface1with90opacity);
+  transition: all 0.2s ease-out;
+}
+
+*:focus-visible {
+  transition: all 0.2s ease;
+  border-radius: inherit;
+}
+
+input[type="radio"]:focus-visible {
+  box-shadow: none;
+  outline-offset: 4px;
+  outline-color: var(--surface1);
+}
+
+input[type="checkbox"]:focus-visible {
+  box-shadow: none;
+  outline-offset: 4px;
+  outline-color: var(--surface1);
+}
+
+dialog button:focus-visible {
+  box-shadow: none;
+  outline: 1px ridge var(--accent);
+  outline-offset: 4px;
+  border-radius: 0.4rem;
+}
+
+input[type="text"]:focus-visible,
+input[type="password"]:focus-visible {
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  background-color: var(--accentwith10opacity);
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="search"]:focus-visible {
+  background-color: var(--accentwith10opacity);
+  box-shadow: none;
+}
+
+input[type="date"]:focus-visible {
+  outline: 3px solid var(--accent);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@font-face {
+    font-family: "Mango Grotesque";
+    src: url("MangoGrotesque.woff2");
+    font-weight: 100 900;
+    unicode-range: U+0020-007E, U+00A1-00AC, U+00AE-00B4, U+00B6-017F,
+        U+0192, U+0237, U+02C6-02C7, U+02D8-02DD, U+03BC, U+2013-2014,
+        U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A,
+        U+2044, U+2074, U+20AC, U+2122, U+2212, U+FB01-FB02;
+}
+
