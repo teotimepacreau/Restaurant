@@ -3,24 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌇</text></svg>"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div id="background">
-        <div id="circle-sun" class="circle">
-          <div id="circle-yellow" class="circle"></div>
+      <section id="homepage">
+        <div id="background">
+          <nav id="index-nav">
+            <ul id="index-nav-menu">
+              <li>Menu</li>
+              <li>Réserver</li>
+              <li>Notre histoire</li>
+            </ul>
+          </nav>
+          <div id="circle-sun" class="circle">
+            <div id="circle-yellow" class="circle"></div>
+          </div>
+          <div id="circle-pink" class="circle"></div>
         </div>
-        <div id="circle-pink" class="circle"></div>
-      </div>
-      <div id="index-bottom">
-        <h1>Sunshine Restaurant</h1>
-        <i class="ph ph-arrow-down"></i>
-    </div>
+        <div id="index-bottom">
+          <h1>Sunshine Restaurant</h1>
+          <a id="go-to-content" onclick="scrollToContent()">
+            <i class="ph ph-arrow-down"></i>
+          </a>
+        </div>
+      </section>
+      <section id="content">
+        <div id="content-scroller-sticky">
+          <div id="left-to-right">
+            <div id="content-scroller-desc">
+              <p>We’re home for creativity at the intersection between gastronomy and ecology. 
+                Bakery, café, eatery and creative space, Sunshine Restaurant offers a new take on simple food. </p>
+            </div>
+            <img src="/img/inner-light.jpg" alt="" />
+            <img src="/img/inner-shadow.jpg" alt="" />
+            <img src="/img/outer.jpg" alt="" />
+          </div>
+        </div>
+      </section>
     </div>
 
     <script type="module" src="main.js"></script>
+
+    <script defer>
+      const content = document.getElementById("content");
+      function scrollToContent() {
+        if (content) {
+          content.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
   </body>
 </html>
