@@ -1,7 +1,7 @@
 import './assets/style.css';
 
 
-const {default: intersection} = await import ('./assets/intersection.js')
+const {default: displayMenuImages} = await import ('./assets/scripts/displayMenuImages')
 
 
-intersection()
+displayMenuImages()
