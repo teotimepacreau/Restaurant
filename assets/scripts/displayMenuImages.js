@@ -2,18 +2,22 @@
 const displayMenuImages = async () => {
     
 
-    const menuItems = document.querySelectorAll('.menu-text');
+    const menuItems = document.querySelectorAll('.menu-items');
     console.log(menuItems);
 
     menuItems.forEach((menu) => {
-        menu.textContent = menu.textContent.toUpperCase();
 
         menu.addEventListener('mouseover', (e) => {
         
-          let img = menu.nextElementSibling
-        img.classList.add('appear');
+          const aliment = menu.firstElementChild.textContent
+          console.log(aliment)
 
-        }, {once: true});
+            const imgPath = `/assets/img/${aliment}.webp`;
+            const img = document.querySelector('#food-img')
+
+            img.src = imgPath
+
+        })
     });
 };
 
