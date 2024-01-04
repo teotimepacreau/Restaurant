@@ -12,6 +12,8 @@
     <title>Sunset Restaurant</title>
   </head>
   <body>
+    <h1 class="counter loader">0</h1>
+    <div class="overlay loader"></div>
     <div class="container">
       <section id="homepage">
         <div id="background">
@@ -38,8 +40,11 @@
         <div id="content-scroller-sticky">
           <div id="left-to-right">
             <div id="content-scroller-desc">
-              <p>We’re home for creativity at the intersection between gastronomy and ecology. 
-                Bakery, café, eatery and creative space, Sunshine Restaurant offers a new take on simple food. </p>
+              <p>
+                We’re home for creativity at the intersection between gastronomy
+                and ecology. Bakery, café, eatery and creative space, Sunshine
+                Restaurant offers a new take on simple food.
+              </p>
             </div>
             <img src="/assets/img/inner-light.jpg" alt="" />
             <img src="/assets/img/inner-shadow.jpg" alt="" />
@@ -49,38 +54,38 @@
       </section>
       <section id="restaurant-food-list">
         <ul id="menu-flexer">
-            <li class="menu-items">
-              <span class="menu-text">Tomato</span>
-              <span class="menu-text"> Salad</span>  
-            </li>
-            <li class="menu-items">
-              <span class="menu-text">Courgette</span>
-              <span class="menu-text"> Flowers</span>  
-            </li>
-            <li class="menu-items">
-              <span class="menu-text">Maquereau</span>
-              <span class="menu-text"> Corail</span>  
-            </li>
-            <li class="menu-items">
-              <span class="menu-text">Clementine</span>
-              <span class="menu-text"> Sugar</span>  
-            </li>
-            <li class="menu-items">
-              <span class="menu-text">Citron</span>
-              <span class="menu-text">Pie</span>  
-            </li>
-            <li class="menu-items">
-              <span class="menu-text">Passion</span>
-              <span class="menu-text">Brownie</span>  
-            </li>
+          <li class="menu-items">
+            <span class="menu-text">Tomato</span>
+            <span class="menu-text"> Salad</span>
+          </li>
+          <li class="menu-items">
+            <span class="menu-text">Courgette</span>
+            <span class="menu-text"> Flowers</span>
+          </li>
+          <li class="menu-items">
+            <span class="menu-text">Maquereau</span>
+            <span class="menu-text"> Corail</span>
+          </li>
+          <li class="menu-items">
+            <span class="menu-text">Clementine</span>
+            <span class="menu-text"> Sugar</span>
+          </li>
+          <li class="menu-items">
+            <span class="menu-text">Citron</span>
+            <span class="menu-text">Pie</span>
+          </li>
+          <li class="menu-items">
+            <span class="menu-text">Passion</span>
+            <span class="menu-text">Brownie</span>
+          </li>
         </ul>
-        <img id="food-img" src="" alt="">
-    </section>
+        <img id="food-img" src="" alt="" />
+      </section>
     </div>
 
     <script type="module" src="main.js"></script>
 
-    <script defer>
+    <script async defer>
       const content = document.getElementById("content");
       function scrollToContent() {
         if (content) {
