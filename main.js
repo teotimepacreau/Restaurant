@@ -1,5 +1,6 @@
 
-const {default: preload} = await import ('./assets/scripts/preloader.js')
+const {default:  preload} = await import ('./assets/scripts/preloader.js')
+
 await preload()
 
 
