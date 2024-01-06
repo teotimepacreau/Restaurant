@@ -1,4 +1,3 @@
-import './assets/style.css';
 
 const {default: preload} = await import ('./assets/scripts/preloader.js')
 await preload()
