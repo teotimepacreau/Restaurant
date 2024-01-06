@@ -16,7 +16,7 @@ const preload = async () => {
         let currentValue = 0;
     
         async function updateCounter() {
-            return new Promise(resolve => {
+            return new Promise(resolve => {//obligé de wrapper dans une Promise car setTimeout est non bloquant (le reste du code continuerait sinon à s'éxecuter en attendant que le délai s'écoule)
                 if (currentValue === 100) {
                     gsap.to('.loader', {
                         y: '100dvh',
@@ -43,7 +43,7 @@ const preload = async () => {
                 let delay = Math.floor(Math.random() * 200) + 50;
     
                 setTimeout(() => {
-                    updateCounter().then(resolve); // Recursively call updateCounter and resolve the promise
+                    updateCounter().then(resolve);
                 }, delay);
             });
         }
