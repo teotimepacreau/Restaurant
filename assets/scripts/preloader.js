@@ -6,7 +6,7 @@ const preload = async () => {
     
         let homeAnim = document.querySelectorAll('.home-anim');
         homeAnim.forEach((element, index)=> {
-            gsap.fromTo(element, { y: "-10dvh", opacity: 0, duration: .2, ease: "power4.out" }, {y: "0dvh", opacity: 1, delay: index * 1});
+            gsap.fromTo(element, { y: "-5dvh", opacity: 0, duration: 0.1, ease: "power4.out" }, {y: "0dvh", opacity: 1, delay: index * 0.3});
         })
     };
     

@@ -1,3 +1,9 @@
+/* RESERVATION PAGE */
+#reservation-container {
+  padding: var(--rythme);
+}
+
+/* HOMEPAGE */
 .container {
   position: relative;
 }
